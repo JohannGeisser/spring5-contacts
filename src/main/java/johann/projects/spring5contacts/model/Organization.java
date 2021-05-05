@@ -2,9 +2,12 @@ package johann.projects.spring5contacts.model;
 
 import lombok.Data;
 
-@Data
-public class Organization {
+import javax.persistence.Entity;
 
-    String address;
+@Data
+@Entity
+public class Organization extends Contact {
+
+    private String address;
 
 }
