@@ -37,7 +37,6 @@ public class BootStrapData implements CommandLineRunner {
         person.setSurname("Geisser");
         person.setBirthday("September");
         person.setGender("M");
-        System.out.println("Nombre:");
         person.setNumber("75816516");
 
         personRepository.save(person);

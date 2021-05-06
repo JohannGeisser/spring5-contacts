@@ -14,7 +14,7 @@ public class PersonController {
         this.personRepository = personRepository;
     }
 
-    @RequestMapping({"/person", "/person.html"})
+    @RequestMapping({"/persons", "/persons.html"})
     public String getPersons(Model model) {
         model.addAttribute("persons", personRepository.findAll());
         return "persons/list";
