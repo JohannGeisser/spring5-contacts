@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Detail</title>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td><b>ID</b></td>
+    <td><b>Name</b></td>
+    <td style="font-weight: bold;">Phone</td>
+  </tr>
+
+  <tr th:each="organization : ${organizationDetail}">
+    <td th:text="${organization.id}">1</td>
+    <td th:text="${organization.name}">Johann</td>
+    <td th:text="${organization.number}">75816516</td>
+  </tr>
+</table>
+
+</body>
+</html>

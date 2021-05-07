@@ -41,6 +41,15 @@ public class BootStrapData implements CommandLineRunner {
 
         personRepository.save(person);
 
+        Person person2 = new Person();
+        person2.setName("Josue");
+        person2.setSurname("Geisser");
+        person2.setBirthday("January");
+        person2.setGender("M");
+        person2.setNumber("75816474");
+
+        personRepository.save(person2);
+
         System.out.println("Added Person Contact");
 
         // --------------- Organization ---------------
