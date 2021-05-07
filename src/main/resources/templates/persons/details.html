@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Detail</title>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td><b>ID</b></td>
+    <td><b>Name</b></td>
+    <td><b>Surname</b></td>
+    <td style="font-weight: bold;">Phone</td>
+    <td style="font-weight: bold;">Gender</td>
+    <td style="font-weight: bold;">Birthday</td>
+  </tr>
+
+  <tr th:each="person : ${personDetail}">
+    <td th:text="${person.id}">1</td>
+    <td th:text="${person.name}">Johann</td>
+    <td th:text="${person.surname}">Geisser</td>
+    <td th:text="${person.number}">75816516</td>
+    <td th:text="${person.gender}">M</td>
+    <td th:text="${person.birthday}">19/09/1996</td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacts</title>
+    <style>
+        table {
+            width:70%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        #t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
     <h1 th:text="${'Contacts List'}">Contacts Phone Book</h1>
+
+    <h2><a href="http://localhost:8080/persons">People List</a></h2>
+    <h2><a href="http://localhost:8080/organizations">Organization List</a></h2>
+
+    <table id="t01">
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>Name</b></td>
+            <td><b>Number</b></td>
+        </tr>
+
+        <tr th:each="contact : ${contacts}">
+            <td th:text="${contact.id}">1</td>
+            <td th:text="${contact.name}">Johann</td>
+            <td th:text="${contact.number}">75816516</td>
+            <!-- <td><a href="#" th:href="@{'details' + ${contact.id}}">View</a></td> -->
+        </tr>
+
+
+   </table>
 
 </body>
 </html>
