@@ -16,6 +16,7 @@ public class OrganizationService implements ContactService {
         this.organizationRepository = organizationRepository;
     }
 
+    @Override
     public Organization findById(Long id) {
         Optional<Organization> organizationOptional = organizationRepository.findById(id);
 
